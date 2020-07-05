@@ -14,26 +14,25 @@
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+-keepattributes SourceFile,LineNumberTable
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--injars in.jar
--outjars out.jar
--libaryjars <java.home>/jmods/java.base.jmod(!**.jar;!module-info.class)
+-injars       in.jar
+-outjars      out.jar
+-libraryjars  <java.home>/jmods/java.base.jmod(!**.jar;!module-info.class)
 -printmapping out.map
--keep class com.blongho.country_data* {
-   *;
-  }
+
+-keep public class com.blongho.country_data.* {
+    public *;
+}
 
 -keepparameternames
 -renamesourcefileattribute SourceFile
--keepattributes Exceptions,InnerClasses,Signature,Deprecated, SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
--keepclasseswithmembers, allowoptimization enum * {
-                             public static **[] values();
-                             public static ** valueOf(java.lang.String);
-                         }
--keepclasseswithmembernames, includedescriptorclasses class * {
-                                 native <methods>;
-                             }
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,
+                SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+
+-keepclassmembers class com.blongho.country_data.R$* {
+    public static <fields>;
+}
