@@ -30,7 +30,7 @@
     <path
         android:fillAlpha="1"
         android:fillColor="#cf142b"
-        android:fillType="nonZero"
+        
         android:pathData="m0,0 l600,0 0,300 -600,0z"
         android:strokeColor="#00000000" />
     <path
