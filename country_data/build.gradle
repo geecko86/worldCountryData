@@ -29,12 +29,11 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 24
         targetSdkVersion 31
         versionCode 1
         versionName "1.5.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
